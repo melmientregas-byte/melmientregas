@@ -5,17 +5,130 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Serviços - MelMi Entregas Rápidas</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
-    body { background-color: #f4f4f9; color: #333; text-align: center; }
-    header { background-color: #1b1b1b; padding: 15px; color: #fff; }
-    header img { max-width: 160px; height: auto; }
-    nav { margin-top: 10px; }
-    nav a { color: #f4c430; text-decoration: none; margin: 0 15px; font-weight: bold; }
-    .container { padding: 30px 20px; max-width: 800px; margin: 0 auto; text-align: left; }
-    h1 { text-align: center; margin-bottom: 20px; color: #1b1b1b; }
-    .card-servico { background: #fff; padding: 20px; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 2px 6px rgba(0,0,0,0.08); }
-    .card-servico h3 { color: #1b1b1b; margin-bottom: 8px; }
-    footer { margin-top: 40px; padding: 15px; background-color: #1b1b1b; color: #888; font-size: 0.9em; text-align: center; }
+    :root {
+      --navy: #1c2850;
+      --cyan: #00a3e0;
+      --light-blue: #e8f6fc;
+      --dark-gray: #222222;
+      --light-gray: #f8f9fa;
+      --whatsapp-green: #25d366;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: var(--light-gray);
+      color: var(--dark-gray);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #ffffff 0%, var(--light-blue) 100%);
+      padding: 20px;
+      text-align: center;
+      border-bottom: 4px solid var(--cyan);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    header img {
+      max-width: 240px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    nav a {
+      color: var(--navy);
+      text-decoration: none;
+      font-weight: 700;
+      margin: 0 15px;
+      text-transform: uppercase;
+      font-size: 0.95em;
+    }
+
+    nav a:hover {
+      color: var(--cyan);
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: var(--navy);
+      font-size: 2em;
+      margin-bottom: 30px;
+    }
+
+    .service-card {
+      background: #ffffff;
+      border-radius: 8px;
+      padding: 25px;
+      margin-bottom: 25px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      border-left: 5px solid var(--cyan);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .service-card img {
+      width: 220px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    .service-info {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .service-info h2 {
+      color: var(--navy);
+      font-size: 1.3em;
+      margin-bottom: 10px;
+    }
+
+    .service-info p {
+      color: #555555;
+      font-size: 1em;
+    }
+
+    .cta-area {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .btn-whatsapp {
+      display: inline-block;
+      background-color: var(--whatsapp-green);
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 1.1em;
+      padding: 14px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+    }
+
+    footer {
+      background-color: var(--navy);
+      color: #ffffff;
+      text-align: center;
+      padding: 25px 20px;
+      margin-top: 50px;
+      border-top: 3px solid var(--cyan);
+      font-size: 0.9em;
+    }
   </style>
 </head>
 <body>
@@ -29,26 +142,42 @@
   </header>
 
   <div class="container">
-    <h1>Nossos Serviços</h1>
+    <h1>Nossa Linha de Serviços de Transporte</h1>
 
-    <div class="card-servico">
-      <h3>📦 Entrega de Documentos e Encomendas Rápida</h3>
-      <p>Coleta e entrega expressa para pequenas encomendas, contratos e documentos urgentes.</p>
+    <div class="service-card">
+      <img src="moto-bau.jpg" alt="Moto Cargo com Baú">
+      <div class="service-info">
+        <h2>Entregas em Moto Cargo (Baú)</h2>
+        <p>Serviço ideal para transporte seguro de caixas, peças e volumes que necessitam de isolamento e proteção reforçada contra intempéries.</p>
+      </div>
     </div>
 
-    <div class="card-servico">
-      <h3>💼 Atendimento Corporativo / Empresas</h3>
-      <p>Serviços dedicados e diários para escritórios e comércios com opção de faturamento prévio.</p>
+    <div class="service-card">
+      <img src="moto-bag.jpg" alt="Moto com Bauleto e Bag">
+      <div class="service-info">
+        <h2>Entregas em Moto com Bauleto e Bag</h2>
+        <p>Agilidade máxima no trânsito urbano para documentos, serviços de cartório, contratos e pequenas encomendas urgentes.</p>
+      </div>
     </div>
 
-    <div class="card-servico">
-      <h3>💳 Pagamentos e Logística</h3>
-      <p>Serviço de retorno para entrega de comprovantes, recolhimento de assinaturas e maquininha de cartão.</p>
+    <div class="service-card">
+      <img src="utilitario-fiorino.jpg" alt="Fiorino e Utilitários">
+      <div class="service-info">
+        <h2>Transporte com Fiorino e Utilitários</h2>
+        <p>Solução perfeita para cargas maiores, múltiplos volumes ou mercadorias pesadas que ultrapassam a capacidade das motos.</p>
+      </div>
+    </div>
+
+    <div class="cta-area">
+      <a class="btn-whatsapp" href="https://wa.me/5511918582717?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20entrega." target="_blank">
+        Fazer Cotação Personalizada no WhatsApp
+      </a>
     </div>
   </div>
 
   <footer>
-    &copy; MelMi Entregas Rápidas. Todos os direitos reservados.
+    &copy; MelMi Entregas Rápidas. Todos os direitos reservados.<br>
+    Contato: (11) 91858-2717
   </footer>
 
 </body>
