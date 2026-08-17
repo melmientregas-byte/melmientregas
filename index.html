@@ -3,99 +3,188 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MelMi Entregas Rápidas</title>
+  <title>MelMi Entregas Rápidas - Soluções em Logística Expressa</title>
   <style>
+    :root {
+      --navy: #1c2850;
+      --cyan: #00a3e0;
+      --light-blue: #e8f6fc;
+      --dark-gray: #222222;
+      --light-gray: #f8f9fa;
+      --whatsapp-green: #25d366;
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
+
     body {
-      background-color: #121212;
-      color: #f4f4f4;
-      text-align: center;
-    }
-    header {
-      background-color: #000000;
-      padding: 20px;
-      border-bottom: 3px solid #f4c430;
-    }
-    header img {
-      max-width: 180px;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-    }
-    nav {
-      margin-top: 15px;
-    }
-    nav a {
-      color: #f4c430;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-      text-transform: uppercase;
-      font-size: 0.9em;
-      letter-spacing: 1px;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    .banner {
-      width: 100%;
-      max-height: 320px;
-      object-fit: cover;
-      display: block;
-      border-bottom: 2px solid #333;
-    }
-    .container {
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    h1 {
-      margin-bottom: 15px;
-      color: #f4c430;
-      font-size: 2em;
-      text-transform: uppercase;
-    }
-    p {
-      font-size: 1.1em;
+      background-color: var(--light-gray);
+      color: var(--dark-gray);
       line-height: 1.6;
-      margin-bottom: 30px;
-      color: #ccc;
     }
+
+    /* Cabeçalho alinhado ao cartão */
+    header {
+      background: linear-gradient(135deg, #ffffff 0%, var(--light-blue) 100%);
+      padding: 20px;
+      text-align: center;
+      border-bottom: 4px solid var(--cyan);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    }
+
+    header img {
+      max-width: 240px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: var(--navy);
+      text-decoration: none;
+      font-weight: 700;
+      margin: 0 15px;
+      text-transform: uppercase;
+      font-size: 0.95em;
+      letter-spacing: 0.5px;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: var(--cyan);
+    }
+
+    /* Seção Principal / Banner Hero */
+    .hero {
+      background: linear-gradient(180deg, var(--navy) 0%, #0d1527 100%);
+      color: #ffffff;
+      padding: 50px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero h1 {
+      font-size: 2.3em;
+      color: #ffffff;
+      margin-bottom: 15px;
+      font-weight: 800;
+    }
+
+    .hero h1 span {
+      color: var(--cyan);
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      max-width: 750px;
+      margin: 0 auto 30px auto;
+      color: #e0e0e0;
+    }
+
     .btn-whatsapp {
       display: inline-block;
-      background-color: #25d366;
-      color: #fff;
+      background-color: var(--whatsapp-green);
+      color: #ffffff;
       font-weight: bold;
-      font-size: 1.2em;
-      padding: 16px 32px;
+      font-size: 1.25em;
+      padding: 16px 36px;
       border-radius: 50px;
       text-decoration: none;
-      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
-      transition: transform 0.2s ease, background-color 0.2s ease;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+      transition: transform 0.2s, background-color 0.2s;
     }
+
     .btn-whatsapp:hover {
       background-color: #1eb954;
-      transform: scale(1.03);
+      transform: translateY(-2px);
     }
-    footer {
-      margin-top: 50px;
+
+    /* Seção de Cobertura */
+    .coverage-banner {
+      background-color: var(--cyan);
+      color: #ffffff;
       padding: 20px;
-      background-color: #000000;
-      color: #777;
-      font-size: 0.85em;
-      border-top: 1px solid #222;
+      text-align: center;
+      font-size: 1.2em;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    }
+
+    /* Container de Conteúdo */
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    /* Galeria de Frotas */
+    .fleet-section {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .fleet-section h2 {
+      color: var(--navy);
+      font-size: 1.8em;
+      margin-bottom: 25px;
+    }
+
+    .fleet-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .fleet-card {
+      background: #ffffff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      border-top: 4px solid var(--cyan);
+    }
+
+    .fleet-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .fleet-card-body {
+      padding: 20px;
+    }
+
+    .fleet-card-body h3 {
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .fleet-card-body p {
+      color: #555555;
+      font-size: 0.95em;
+    }
+
+    /* Rodapé */
+    footer {
+      background-color: var(--navy);
+      color: #ffffff;
+      text-align: center;
+      padding: 25px 20px;
+      margin-top: 40px;
+      border-top: 3px solid var(--cyan);
+      font-size: 0.9em;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <!-- Certifique-se de que o arquivo da logo esteja na mesma pasta com o nome logo.png -->
     <img src="logo.png" alt="MelMi Entregas Rápidas">
     <nav>
       <a href="index.html">Início</a>
@@ -103,19 +192,46 @@
     </nav>
   </header>
 
-  <img src="banner.jpg" alt="MelMi Entregas Rápidas" class="banner">
+  <section class="hero">
+    <h1>MelMi <span>Entregas Rápidas</span></h1>
+    <p>Mais de <strong>300 motoboys espalhados pela Grande São Paulo</strong> para atender com a máxima agilidade, segurança e eficiência a sua entrega!</p>
+    <a class="btn-whatsapp" href="https://wa.me/5511918582717?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20entrega.%0A%0A%F0%9F%93%9D%20*1.%20RETIRADA*%0A*%20Endere%C3%A7o%20completo%3A%20%0A*%20Ponto%20de%20refer%C3%AAncia%3A%20%0A*%20Procurar%20por%3A%20%0A%0A%F0%9F%8F%81%20*2.%20ENTREGA*%0A*%20Endere%C3%A7o%20completo%3A%20%0A*%20Ponto%20de%20refer%C3%AAncia%3A%20%0A*%20Aos%20cuidados%20de%3A%20%0A%0A%F0%9F%93%A6%20*3.%20DETALHES%20DO%20PEDIDO*%0A*%20O%20que%20ser%C3%A1%20transportado%3F%20%0A*%20Tamanho%20%2F%20Peso%20aproximado%3A%20%0A*%20Precisa%20de%20retorno%3F%20(Sim%20%2F%20N%C3%A3o)%0A%0A%F0%9F%92%B3%20*4.%20PAGAMENTO*%0A*%20Forma%20de%20pagamento%3A%20Pix" target="_blank">
+      Solicitar Orçamento via WhatsApp
+    </a>
+  </section>
+
+  <div class="coverage-banner">
+    📍 Cobertura Completa em São Paulo, Capital e Região Metropolitana
+  </div>
 
   <div class="container">
-    <h1>MelMi Entregas Rápidas</h1>
-    <p>Agilidade, segurança e pontualidade no transporte de seus documentos e mercadorias. Solicite seu orçamento via WhatsApp agora mesmo!</p>
+    <div class="fleet-section">
+      <h2>Nossa Frota Agilizada</h2>
+      <div class="fleet-grid">
+        
+        <div class="fleet-card">
+          <img src="moto-bau.jpg" alt="Moto Cargo com Baú">
+          <div class="fleet-card-body">
+            <h3>Moto Cargo com Baú</h3>
+            <p>Ideal para volumes maiores, caixas e encomendas que exigem proteção total contra chuva e impactos.</p>
+          </div>
+        </div>
 
-    <a class="btn-whatsapp" href="https://wa.me/5511918582717?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20entrega.%0A%0A%F0%9F%93%9D%20*1.%20RETIRADA*%0A*%20Endere%C3%A7o%20completo%3A%20%0A*%20Ponto%20de%20refer%C3%AAncia%3A%20%0A*%20Procurar%20por%3A%20%0A%0A%F0%9F%8F%81%20*2.%20ENTREGA*%0A*%20Endere%C3%A7o%20completo%3A%20%0A*%20Ponto%20de%20refer%C3%AAncia%3A%20%0A*%20Aos%20cuidados%20de%3A%20%0A%0A%F0%9F%93%A6%20*3.%20DETALHES%20DO%20PEDIDO*%0A*%20O%20que%20ser%C3%A1%20transportado%3F%20%0A*%20Tamanho%20%2F%20Peso%20aproximado%3A%20%0A*%20Precisa%20de%20retorno%3F%20(Sim%20%2F%20N%C3%A3o)%0A%0A%F0%9F%92%B3%20*4.%20PAGAMENTO*%0A*%20Forma%20de%20pagamento%3A%20Pix" target="_blank">
-      Pedir Orçamento no WhatsApp
-    </a>
+        <div class="fleet-card">
+          <img src="moto-bag.jpg" alt="Moto com Bauleto e Bag">
+          <div class="fleet-card-body">
+            <h3>Moto com Bauleto e Bag</h3>
+            <p>Perfeita para documentos, envelopes, pequenos volumes e entregas ultra expressas do dia a dia.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </div>
 
   <footer>
-    &copy; MelMi Entregas Rápidas. Todos os direitos reservados.
+    &copy; MelMi Entregas Rápidas. Todos os direitos reservados.<br>
+    Central de Atendimento: (11) 91858-2717
   </footer>
 
 </body>
