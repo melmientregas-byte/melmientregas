@@ -6,11 +6,10 @@
   <title>Serviços - MelMi Entregas Rápidas</title>
   <style>
     :root {
-      --navy: #1c2850;
+      --primary-blue: #1c2850;
       --cyan: #00a3e0;
-      --light-blue: #e8f6fc;
-      --dark-gray: #222222;
-      --light-gray: #f8f9fa;
+      --light-bg: #f4f8fb;
+      --text-dark: #1f2937;
       --whatsapp-green: #25d366;
     }
 
@@ -18,123 +17,144 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Segoe UI', Arial, sans-serif;
     }
 
     body {
-      background-color: var(--light-gray);
-      color: var(--dark-gray);
+      background-color: var(--light-bg);
+      color: var(--text-dark);
       line-height: 1.6;
     }
 
     header {
-      background: linear-gradient(135deg, #ffffff 0%, var(--light-blue) 100%);
-      padding: 20px;
-      text-align: center;
-      border-bottom: 4px solid var(--cyan);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 5%;
+      background: #ffffff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
 
-    header img {
-      max-width: 240px;
-      height: auto;
-      margin-bottom: 10px;
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-text {
+      font-weight: 900;
+      font-size: 1.6em;
+      color: var(--primary-blue);
+      line-height: 1;
+    }
+
+    .logo-text span {
+      display: block;
+      font-size: 0.45em;
+      color: var(--cyan);
+      letter-spacing: 2px;
     }
 
     nav a {
-      color: var(--navy);
       text-decoration: none;
+      color: var(--primary-blue);
       font-weight: 700;
-      margin: 0 15px;
+      font-size: 0.85em;
       text-transform: uppercase;
-      font-size: 0.95em;
-    }
-
-    nav a:hover {
-      color: var(--cyan);
+      margin-left: 20px;
     }
 
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 40px auto;
       padding: 0 20px;
     }
 
     h1 {
       text-align: center;
-      color: var(--navy);
-      font-size: 2em;
+      color: var(--primary-blue);
+      font-size: 2.2em;
       margin-bottom: 30px;
+      text-transform: uppercase;
     }
 
     .service-card {
       background: #ffffff;
-      border-radius: 8px;
-      padding: 25px;
+      border-radius: 12px;
+      padding: 30px;
       margin-bottom: 25px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-      border-left: 5px solid var(--cyan);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      border-left: 6px solid var(--cyan);
       display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
+      gap: 25px;
       align-items: center;
+      flex-wrap: wrap;
     }
 
-    .service-card img {
-      width: 220px;
-      height: 140px;
-      object-fit: cover;
-      border-radius: 6px;
+    .service-icon-box {
+      width: 100px;
+      height: 100px;
+      background-color: #e8f6fc;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .service-info {
       flex: 1;
-      min-width: 250px;
+      min-width: 280px;
     }
 
     .service-info h2 {
-      color: var(--navy);
-      font-size: 1.3em;
-      margin-bottom: 10px;
+      color: var(--primary-blue);
+      font-size: 1.4em;
+      margin-bottom: 8px;
     }
 
     .service-info p {
-      color: #555555;
-      font-size: 1em;
+      color: #4b5563;
     }
 
-    .cta-area {
-      text-align: center;
-      margin-top: 40px;
-    }
-
-    .btn-whatsapp {
+    .btn-solicitar {
       display: inline-block;
-      background-color: var(--whatsapp-green);
+      margin-top: 12px;
+      background-color: var(--cyan);
       color: #ffffff;
-      font-weight: bold;
-      font-size: 1.1em;
-      padding: 14px 30px;
-      border-radius: 50px;
       text-decoration: none;
-      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+      padding: 10px 20px;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 0.9em;
     }
 
     footer {
-      background-color: var(--navy);
+      background-color: var(--primary-blue);
       color: #ffffff;
       text-align: center;
-      padding: 25px 20px;
+      padding: 30px 20px;
       margin-top: 50px;
-      border-top: 3px solid var(--cyan);
-      font-size: 0.9em;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="logo.png" alt="MelMi Entregas Rápidas">
+    <div class="logo-container">
+      <svg width="45" height="45" viewBox="0 0 100 100" fill="none">
+        <path d="M10 70 C 30 40, 70 40, 90 70 C 70 50, 30 50, 10 70 Z" fill="#00a3e0"/>
+        <circle cx="25" cy="70" r="12" stroke="#1c2850" stroke-width="6" fill="none"/>
+        <circle cx="75" cy="70" r="12" stroke="#1c2850" stroke-width="6" fill="none"/>
+        <path d="M35 50 L50 30 L70 30" stroke="#1c2850" stroke-width="6" stroke-linecap="round"/>
+      </svg>
+      <div class="logo-text">
+        MELMI
+        <span>ENTREGAS RÁPIDAS</span>
+      </div>
+    </div>
     <nav>
       <a href="index.html">Início</a>
       <a href="servicos.html">Serviços</a>
@@ -142,42 +162,44 @@
   </header>
 
   <div class="container">
-    <h1>Nossa Linha de Serviços de Transporte</h1>
+    <h1>Nossos Serviços de Transporte</h1>
 
     <div class="service-card">
-      <img src="moto-bau.jpg" alt="Moto Cargo com Baú">
+      <div class="service-icon-box">
+        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#00a3e0" stroke-width="2"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1 .4-1 1v7c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>
+      </div>
       <div class="service-info">
-        <h2>Entregas em Moto Cargo (Baú)</h2>
-        <p>Serviço ideal para transporte seguro de caixas, peças e volumes que necessitam de isolamento e proteção reforçada contra intempéries.</p>
+        <h2>Moto Cargo com Baú</h2>
+        <p>Transporte com isolamento térmico e proteção completa contra chuva e impactos. Indicado para caixas, peças e volumes maiores.</p>
+        <a href="https://wa.me/5511918582717?text=Quero+orçamento+para+Moto+com+Baú" class="btn-solicitar">Pedir Orçamento</a>
       </div>
     </div>
 
     <div class="service-card">
-      <img src="moto-bag.jpg" alt="Moto com Bauleto e Bag">
+      <div class="service-icon-box">
+        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#00a3e0" stroke-width="2"><circle cx="9" cy="19" r="2"/><circle cx="17" cy="19" r="2"/><path d="M5 17h14v-5H9l-3-4H2"/></svg>
+      </div>
       <div class="service-info">
-        <h2>Entregas em Moto com Bauleto e Bag</h2>
-        <p>Agilidade máxima no trânsito urbano para documentos, serviços de cartório, contratos e pequenas encomendas urgentes.</p>
+        <h2>Moto com Bauleto e Bag</h2>
+        <p>Agilidade para o trânsito urbano. Ideal para documentos, exames médicos, contratos, cartório e pequenos objetos urgentes.</p>
+        <a href="https://wa.me/5511918582717?text=Quero+orçamento+para+Moto+com+Bag" class="btn-solicitar">Pedir Orçamento</a>
       </div>
     </div>
 
-    <div class="service-card">
-      <img src="utilitario-fiorino.jpg" alt="Fiorino e Utilitários">
-      <div class="service-info">
-        <h2>Transporte com Fiorino e Utilitários</h2>
-        <p>Solução perfeita para cargas maiores, múltiplos volumes ou mercadorias pesadas que ultrapassam a capacidade das motos.</p>
+    <div id="veiculos" class="service-card">
+      <div class="service-icon-box">
+        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="#00a3e0" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="2"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
       </div>
-    </div>
-
-    <div class="cta-area">
-      <a class="btn-whatsapp" href="https://wa.me/5511918582717?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento%20de%20entrega." target="_blank">
-        Fazer Cotação Personalizada no WhatsApp
-      </a>
+      <div class="service-info">
+        <h2>Fiorino e Utilitários Leves</h2>
+        <p>Serviço dedicado para cargas médias e pesadas ou grande quantidade de caixas que excedem a capacidade de transporte das motos.</p>
+        <a href="https://wa.me/5511918582717?text=Quero+orçamento+para+Fiorino/Utilitário" class="btn-solicitar">Pedir Orçamento</a>
+      </div>
     </div>
   </div>
 
   <footer>
-    &copy; MelMi Entregas Rápidas. Todos os direitos reservados.<br>
-    Contato: (11) 91858-2717
+    &copy; 2026 MelMi Entregas Rápidas - (11) 91858-2717
   </footer>
 
 </body>
